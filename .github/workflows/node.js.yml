@@ -30,7 +30,7 @@ jobs:
         
     - run: npm ci
     
-    - run: npm run build --if-present
+    - run: npm run build . --if-present
     
     - run: npm test
     
@@ -39,6 +39,6 @@ jobs:
       with:
         image: jayyychew/react-sample-app
         registry: docker.io
-        tags: v1,latest
+        tags: latest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
